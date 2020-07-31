@@ -1,0 +1,13 @@
+Write-Host "Escribir el id del proceso a parar :" -NoNewline
+$proceso = Read-Host
+
+$str = "Get-Process -Id " + $proceso + " | Select-Object Name"
+
+Write-Host "¿Quieres eliminar el proceso? ", $str, " | s o n |: " -NoNewline
+$opcion = Read-Host
+
+if($opcion -eq 's')
+{
+    $str = "Stop-Process -Id" + $proceso
+    Invoke-Expression $str
+}

@@ -1,0 +1,8 @@
+for([int]$i = 1; $i -lt 101; $i++){
+if($i % 2 -eq 0){
+Write-host $i", " -NoNewline -ForegroundColor Green
+}
+else{
+Write-host $i", " -NoNewline
+}
+}
